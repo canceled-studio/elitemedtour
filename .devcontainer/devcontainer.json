@@ -1,0 +1,20 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+	"name": "Elitemedtour Development Container",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+"remoteUser": "node",
+"features": {
+	"ghcr.io/devcontainers/features/python:1": {}
+},
+"customizations": {
+	"vscode": {
+		"extensions": [
+			"ms-azuretools.vscode-docker",
+			"alexcvzz.vscode-sqlite",
+			"ahmadalli.vscode-nginx-conf"
+		]
+	}
+}
+}
