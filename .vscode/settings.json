@@ -1,0 +1,9 @@
+{
+    "search.exclude": {
+        "**/_site": true,
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
