@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elitemedtour</title>
+    <title>Elite Med Tour</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="bg-blue-500">
-    <div id="page" class="my-5 max-w-5xl container mx-auto">
-        <header class="flex justify-between">
+    <div id="page" class="my-5 max-w-5xl container mx-auto grid grid-cols-[1fr_4fr] gap-5">
+        <header class="col-span-2 flex justify-between">
             <img id="logo" src="/img/logo.png" width="132" alt="Elite Med Tour logo">
             <div id="contacts" class="flex flex-col gap-2">
                 <div id="socials" class="flex gap-2">
@@ -32,6 +32,13 @@
                 </div>
             </div>
         </header>
+        <aside class="col-start-1 flex flex-col gap-2">
+            <h2 class="section-header">Меню</h2>
+            <nav></nav>
+        </aside>
+        <section class="col-start-2">
+            <h2 class="section-header">Добро пожаловать</h2>
+        </section>
     </div>
 </body>
 </html>

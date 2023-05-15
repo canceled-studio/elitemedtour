@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 a {
-    @apply underline;
-    @apply text-indigo-800;
+    @apply underline text-indigo-800;
+}
+
+.section-header {
+    @apply px-3 py-2 font-bold text-white rounded-lg bg-gray-300 shadow-[1px_2px_5px] shadow-gray-700;
 }
