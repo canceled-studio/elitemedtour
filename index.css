@@ -19,7 +19,7 @@ a {
 }
 
 .nav-item {
-  @apply text-sm px-1 py-2 shadow-[inset_4px_4px_8px_0px,inset_-0_-1px_2px_2px] shadow-sky-400 hover:bg-yellow-500 hover:shadow-yellow-200 rounded-2xl text-white;
+  @apply text-white no-underline flex justify-center text-sm px-1 py-2 shadow-[inset_4px_4px_8px_0px,inset_-0_-1px_2px_2px] shadow-sky-400 hover:bg-yellow-500 hover:shadow-yellow-200 rounded-2xl;
 }
 
 .nav-item-selected {
