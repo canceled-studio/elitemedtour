@@ -1,5 +1,9 @@
-module.exports = function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("img");
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
-    return { input: "src/*", output: "_site/*" };
-}
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("img");
+
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
+
+  return { input: "src/*", output: "_site/*" };
+};

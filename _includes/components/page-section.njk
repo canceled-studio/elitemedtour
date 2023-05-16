@@ -1,0 +1,6 @@
+<section class="col-start-2 section">
+    <h2 class="section-header">{{ section.title }}</h2>
+    <article class="p-4 text-justify section-body">
+       {% renderFile "./_includes/content/" + section.content + ".md" %}
+    </article>
+</section>
