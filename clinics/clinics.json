@@ -1,1 +1,4 @@
-{ "layout": "layouts/default.njk", "tags": "clinics" }
+{ 
+    "layout": "layouts/default.njk", 
+    "tags": "clinics"
+}
