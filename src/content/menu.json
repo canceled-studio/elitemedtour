@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Главная",
+        "link": "/"
+    },
+    {
+        "title": "Клиники в Швейцарии",
+        "link": "/clinics/switzerland/"
+    },
+    {
+        "title": "Клиники в Турции",
+        "link": "/clinics/turkey/"
+    },
+    {
+        "title": "Термальные источники",
+        "link": "/springs/"
+    },
+    {
+        "title": "СПА",
+        "link": "/spas/"
+    },
+    {
+        "title": "Услуги",
+        "link": "/services/"
+    },
+    {
+        "title": "Новости",
+        "link": "/news/"
+    },
+    {
+        "title": "Партнеры",
+        "link": "/partners/"
+    },
+    {
+        "title": "Контакты",
+        "link": "/contacts/"
+    },
+    {
+        "title": "Отзывы",
+        "link": "/reviews/"
+    }
+]
