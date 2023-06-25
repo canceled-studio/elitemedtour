@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { Menu } from "@/components/menu";
-import { Header } from "@/components/section";
+import { Menu } from "./menu";
+import { Header } from "./section";
 
-function Icon({ src, alt }) {
+function ContactIcon({ src, alt }) {
   return <Image height="32" width="32" alt={alt} src={src} />;
 }
 
@@ -11,10 +11,16 @@ function Contacts() {
     <div id="contacts" className="flex flex-col gap-2">
       <div id="socials" className="flex gap-2">
         <a href="http://vk.com">
-          <Icon alt="vkontakte" src="https://cdn.simpleicons.org/vk/fff" />
+          <ContactIcon
+            alt="vkontakte"
+            src="https://cdn.simpleicons.org/vk/fff"
+          />
         </a>
         <a href="http://fb.com">
-          <Icon alt="Facebook" src="https://cdn.simpleicons.org/facebook/fff" />
+          <ContactIcon
+            alt="Facebook"
+            src="https://cdn.simpleicons.org/facebook/fff"
+          />
         </a>
       </div>
       <div className="grid gap-x-3 text-white grid-cols-[1fr_2fr] grid-rows-2">
@@ -50,7 +56,7 @@ export default function Layout({ children }) {
         <Menu />
       </aside>
 
-      <div id="page-content" className="flex flex-col gap-5">
+      <div id="page-content" className="flex flex-col section">
         {children}
       </div>
     </div>
