@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 a {
-  @apply underline text-indigo-800;
+  @apply underline text-[#00e];
 }
 
 .section {

@@ -1,8 +1,9 @@
 export function Header({ children }) {
   return (
-    <h2 className="px-3 py-2 font-bold text-white rounded-xl bg-gray-300 shadow-[1px_2px_5px] shadow-gray-700">
-      {children}
-    </h2>
+    <div className="flex gap-2 px-3 py-2 font-bold text-white rounded-xl bg-gradient-to-b from-[#d0d0d0] to-[#a19c99] shadow-[1px_2px_5px] shadow-gray-700">
+      <Icon />
+      <h2>{children}</h2>
+    </div>
   );
 }
 
@@ -17,5 +18,29 @@ export function Body({ children }) {
 export function Section({ children }) {
   return (
     <section className="flex flex-col gap-3 col-start-2">{children}</section>
+  );
+}
+
+export function Icon() {
+  return (
+    <svg
+      width="25"
+      height="25"
+      viewBox="0 0 500 500"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="500" height="500" rx="50" fill="#008EBB" />
+      <rect x="187" y="75" width="125" height="350" rx="12" fill="white" />
+      <rect
+        x="425"
+        y="187"
+        width="125"
+        height="350"
+        rx="12"
+        transform="rotate(90 425 187)"
+        fill="white"
+      />
+    </svg>
   );
 }
