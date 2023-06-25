@@ -1,5 +1,7 @@
 import Link from "next/link";
-import menuItems from "@/content/menu.json";
+
+import { Header } from "@/components/section";
+import menuItems from "@/_content/menu.json";
 
 export function MenuItem({ title, link }) {
   const common =
@@ -19,7 +21,7 @@ export function MenuItem({ title, link }) {
   );
 }
 
-export function Menu() {
+export function MenuItemList() {
   return (
     <nav className="py-4 px-2 section-body">
       <ul className="text-center flex flex-col gap-2">
@@ -28,5 +30,14 @@ export function Menu() {
         ))}
       </ul>
     </nav>
+  );
+}
+
+export function Menu() {
+  return (
+    <aside className="col-start-1 section">
+      <Header>Меню</Header>
+      <MenuItemList />
+    </aside>
   );
 }

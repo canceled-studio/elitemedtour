@@ -1,0 +1,14 @@
+[
+    {
+        "id": "phone",
+        "title": "Телефон",
+        "href": "tel:+41213201690",
+        "value": "+41 21 320-16-90"
+    },
+    {
+        "id": "email",
+        "title": "E-mail",
+        "href": "mailto:info@elitemedtour.ch",
+        "value": "info@elitemedtour.ch"
+    }
+]
