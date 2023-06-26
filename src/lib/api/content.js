@@ -23,15 +23,6 @@ export async function getSingleContent(slug) {
   return { slug, frontmatter, content };
 }
 
-export function getAllContentSlugsByType(type) {
-  const contentTypePath = resolveContentPath(type);
-  const contentFileNames = readdirSync(contentTypePath);
-
-  return contentFileNames
-    .filter((fileName) => fileName.endsWith(CONTENT_FILENAME_EXTENSION))
-    .map((fileName) => stripExtension(fileName));
-}
-
 export function getAllContentByType(type) {
   const contentTypePath = resolveContentPath(type);
   const contentFileNames = readdirSync(contentTypePath);
