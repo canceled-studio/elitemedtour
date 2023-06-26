@@ -1,31 +1,53 @@
 import { resolve } from "path";
 import matter from "gray-matter";
 import { readFileSync, readdirSync } from "fs";
+import { serialize } from "next-mdx-remote/serialize";
 
+const CONTENT_FILENAME_EXTENSION = "mdx";
 const CONTENT_DIR_SLUG = "src/_content";
+const CONTENT_DEFAULT_ENCODING = "utf-8";
 
-const resolveContentTypePath = (type) =>
-  resolve(process.cwd(), CONTENT_DIR_SLUG, type);
+const resolveContentPath = (...type) =>
+  resolve(process.cwd(), CONTENT_DIR_SLUG, ...type);
 
-const resolveContentItemPath = (type, slug) =>
-  resolve(process.cwd(), CONTENT_DIR_SLUG, type, slug);
+export const stripExtension = (fileName = "") => fileName.split(".")[0];
+
+export async function getSingleContent(slug) {
+  const fileName = `${slug}.${CONTENT_FILENAME_EXTENSION}`;
+  const filePath = resolveContentPath(fileName);
+  const fileContent = readFileSync(filePath, CONTENT_DEFAULT_ENCODING);
+
+  const { data: frontmatter, content: rawContent } = matter(fileContent);
+  const content = await serialize(rawContent);
+
+  return { slug, frontmatter, content };
+}
 
 export function getAllContentSlugsByType(type) {
-  const contentTypePath = resolveContentTypePath(type);
+  const contentTypePath = resolveContentPath(type);
   const contentFileNames = readdirSync(contentTypePath);
 
-  return contentFileNames.map((fileName) => fileName.split(".")[0]);
+  return contentFileNames
+    .filter((fileName) => fileName.endsWith(CONTENT_FILENAME_EXTENSION))
+    .map((fileName) => stripExtension(fileName));
 }
 
 export function getAllContentByType(type) {
-  const contentTypePath = resolveContentTypePath(type);
+  const contentTypePath = resolveContentPath(type);
   const contentFileNames = readdirSync(contentTypePath);
-  return contentFileNames.map((slug) => {
-    const contentFilePath = resolveContentItemPath(type, slug);
-    const fileContent = readFileSync(contentFilePath, "utf-8");
 
-    const { data, content } = matter(fileContent);
+  return contentFileNames
+    .filter((fileName) => fileName.endsWith(CONTENT_FILENAME_EXTENSION))
+    .map((fileName) => {
+      const contentFilePath = resolveContentPath(type, fileName);
+      const fileContent = readFileSync(
+        contentFilePath,
+        CONTENT_DEFAULT_ENCODING
+      );
 
-    return { slug, frontmatter: data, content };
-  });
+      const slug = resolve("/", type, stripExtension(fileName));
+      const { data: frontmatter, content } = matter(fileContent);
+
+      return { slug, frontmatter, content };
+    });
 }
