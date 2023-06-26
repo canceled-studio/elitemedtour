@@ -5,9 +5,7 @@ import "@/styles/globals.css";
 export default function MyApp({ Component, pageProps }) {
   return (
     <Layout>
-      <MDXProvider>
-        <Component {...pageProps} />
-      </MDXProvider>
+      <Component {...pageProps} />
     </Layout>
   );
 }

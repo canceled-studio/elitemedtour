@@ -1,19 +1,20 @@
-import {
-  getAllContentByType,
-  getAllContentSlugsByType,
-} from "@/lib/api/content";
-import { ContentList } from "@/components/content-list";
+import { getAllContentByType } from "@/lib/api/content";
+import { ContentItem } from "@/components/content-list-item";
+import { Body, Header, Section } from "@/components/section";
 
-export default function Main() {
-  return <ContentList />;
+export default function Main({ items }) {
+  return (
+    <Section>
+      <Header>Главная</Header>
+      <Body>
+        {items.map(({ slug, frontmatter }) => (
+          <ContentItem key={slug} slug={slug} {...frontmatter} />
+        ))}
+      </Body>
+    </Section>
+  );
 }
 
 export const getStaticProps = () => {
-  const items = getAllContentByType("main");
-
-  return {
-    props: {
-      items,
-    },
-  };
+  return { props: { items: getAllContentByType("main") } };
 };
