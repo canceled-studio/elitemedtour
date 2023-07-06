@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export function ContentItem({ title, slug, description, image }) {
+export function ContentListItem({ title, slug, description, image }) {
   return (
     <div className="flex flex-col gap-2">
       <h4 className="text-yellow-400">{title}</h4>

@@ -1,5 +1,5 @@
 import { getAllContentByType, getSingleContent } from "@/lib/api/content";
-import { ContentItem } from "@/components/content-list-item";
+import { ContentListItem } from "@/components/content-list-item";
 import { Body, Header, Section } from "@/components/section";
 
 export default function TurkeyClinics({ page, items }) {
@@ -8,7 +8,7 @@ export default function TurkeyClinics({ page, items }) {
       <Header>{page.frontmatter.title}</Header>
       <Body>
         {items.map(({ slug, frontmatter }) => (
-          <ContentItem key={slug} slug={slug} {...frontmatter} />
+          <ContentListItem key={slug} slug={slug} {...frontmatter} />
         ))}
       </Body>
     </Section>
