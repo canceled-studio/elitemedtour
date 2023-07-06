@@ -8,7 +8,7 @@ function ClinicLocation({ country, city }) {
     <table>
       <tbody>
         <tr>
-          <th style={{ paddingRight: "1rem" }}>Страна:</th>
+          <th className="pr-4">Страна:</th>
           <td>{country}</td>
         </tr>
         <tr>
@@ -32,7 +32,7 @@ export default function Clinic({ page }) {
           height="270"
           src={image}
           alt={title}
-          style={{ float: "left", margin: "1rem" }}
+          className="float-left m-4"
         />
         <ClinicLocation city={city} country={country} />
         <MDXRemote {...page.content} />
