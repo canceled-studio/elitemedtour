@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 import { Header } from "@/components/section";
 import menuItems from "@/_content/menu.json";
@@ -35,7 +34,9 @@ export function MenuItemList() {
             key={link}
             link={link}
             title={title}
-            selected={asPath.startsWith(link)}
+            selected={
+              link.length === 1 ? link === asPath : asPath.startsWith(link)
+            }
           />
         ))}
       </ul>
