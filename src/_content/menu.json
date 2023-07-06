@@ -5,38 +5,38 @@
     },
     {
         "title": "Клиники в Швейцарии",
-        "link": "/clinics/switzerland/"
+        "link": "/clinics/switzerland"
     },
     {
         "title": "Клиники в Турции",
-        "link": "/clinics/turkey/"
+        "link": "/clinics/turkey"
     },
     {
         "title": "Термальные источники",
-        "link": "/springs/"
+        "link": "/springs"
     },
     {
         "title": "СПА",
-        "link": "/spas/"
+        "link": "/spas"
     },
     {
         "title": "Услуги",
-        "link": "/services/"
+        "link": "/services"
     },
     {
         "title": "Новости",
-        "link": "/news/"
+        "link": "/news"
     },
     {
         "title": "Партнеры",
-        "link": "/partners/"
+        "link": "/partners"
     },
     {
         "title": "Контакты",
-        "link": "/contacts/"
+        "link": "/contacts"
     },
     {
         "title": "Отзывы",
-        "link": "/reviews/"
+        "link": "/reviews"
     }
 ]
