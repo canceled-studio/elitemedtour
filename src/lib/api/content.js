@@ -23,9 +23,9 @@ export async function getSingleContent(slug) {
   return { slug, frontmatter, content };
 }
 
-export function getAllContentByType(type) {
+export function getAllContentByType(type, { recursive = false } = {}) {
   const contentTypePath = resolveContentPath(type);
-  const contentFileNames = readdirSync(contentTypePath);
+  const contentFileNames = readdirSync(contentTypePath, { recursive });
 
   return contentFileNames
     .filter((fileName) => fileName.endsWith(CONTENT_FILENAME_EXTENSION))
