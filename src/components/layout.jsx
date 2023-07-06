@@ -10,7 +10,7 @@ export function Header() {
         id="logo"
         width="132"
         height="90"
-        src="/img/logo.png"
+        src="/images/logo.png"
         alt="Elite Med Tour logo"
       />
       <Contacts />
