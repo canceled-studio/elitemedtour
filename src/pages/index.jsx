@@ -1,13 +1,16 @@
 import { ContentItem } from "@/components/content-list-item";
-import { Section, Header, MDXBody, Body } from "@/components/section";
+import { Section, Header, Body } from "@/components/section";
 import { getAllContentByType, getSingleContent } from "@/lib/api/content";
+import { MDXRemote } from "next-mdx-remote";
 
 export default function Home({ page, items }) {
   return (
     <>
       <Section>
         <Header>{page.frontmatter.title}</Header>
-        <MDXBody>{page.content}</MDXBody>
+        <Body>
+          <MDXRemote {...page.content} />
+        </Body>
       </Section>
       <Section>
         <Header>Главная</Header>
