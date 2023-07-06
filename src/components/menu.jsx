@@ -33,9 +33,9 @@ export function MenuItemList() {
         {menuItems.map(({ title, link }) => (
           <MenuItem
             key={link}
-            selected={asPath.startsWith(link)}
-            title={title}
             link={link}
+            title={title}
+            selected={asPath.startsWith(link)}
           />
         ))}
       </ul>

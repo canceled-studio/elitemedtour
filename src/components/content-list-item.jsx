@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Section, Header, Body } from "@/components/section";
 
 export function ContentItem({ title, slug, description, image }) {
   return (
