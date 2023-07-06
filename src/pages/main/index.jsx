@@ -1,5 +1,5 @@
 import { getAllContentByType } from "@/lib/api/content";
-import { ContentListItem } from "@/components/content-list-item";
+import { ContentList } from "@/components/content-list";
 import { Body, Header, Section } from "@/components/section";
 
 export default function Main({ items }) {
@@ -7,9 +7,7 @@ export default function Main({ items }) {
     <Section>
       <Header>Главная</Header>
       <Body>
-        {items.map(({ slug, frontmatter }) => (
-          <ContentListItem key={slug} slug={slug} {...frontmatter} />
-        ))}
+        <ContentList items={items} />
       </Body>
     </Section>
   );

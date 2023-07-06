@@ -21,3 +21,13 @@ export function ContentListItem({ title, slug, description, image }) {
     </div>
   );
 }
+
+export function ContentList({ items }) {
+  return (
+    <div className="flex flex-col gap-2">
+      {items.map(({ slug, frontmatter }) => (
+        <ContentListItem key={slug} slug={slug} {...frontmatter} />
+      ))}
+    </div>
+  );
+}

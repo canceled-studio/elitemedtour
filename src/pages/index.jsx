@@ -1,4 +1,4 @@
-import { ContentListItem } from "@/components/content-list-item";
+import { ContentList } from "@/components/content-list";
 import { Section, Header, Body } from "@/components/section";
 import { getAllContentByType, getSingleContent } from "@/lib/api/content";
 import { MDXRemote } from "next-mdx-remote";
@@ -15,9 +15,7 @@ export default function Home({ page, items }) {
       <Section>
         <Header>Главная</Header>
         <Body>
-          {items.map(({ slug, frontmatter }) => (
-            <ContentListItem key={slug} slug={slug} {...frontmatter} />
-          ))}
+          <ContentList items={items} />
         </Body>
       </Section>
     </>

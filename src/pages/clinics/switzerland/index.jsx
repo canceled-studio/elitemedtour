@@ -1,5 +1,5 @@
 import { MDXRemote } from "next-mdx-remote";
-import { ContentListItem } from "@/components/content-list-item";
+import { ContentList } from "@/components/content-list";
 import { Section, Header, Body } from "@/components/section";
 import { getAllContentByType, getSingleContent } from "@/lib/api/content";
 
@@ -11,9 +11,7 @@ export default function SwitzerlandClinics({ page, items }) {
         <MDXRemote {...page.content} />
       </Body>
       <Body>
-        {items.map(({ slug, frontmatter }) => (
-          <ContentListItem key={slug} slug={slug} {...frontmatter} />
-        ))}
+        <ContentList items={items} />
       </Body>
     </Section>
   );
