@@ -24,7 +24,7 @@ export default function Home({ page, items }) {
 export async function getStaticProps() {
   return {
     props: {
-      page: await getSingleContent("home"),
+      page: await getSingleContent("sections/index"),
       items: getAllContentByType("main"),
     },
   };
