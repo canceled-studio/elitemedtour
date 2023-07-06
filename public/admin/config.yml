@@ -1,0 +1,23 @@
+local_backend: true
+
+media_folder: "public/img"
+public_folder: "/img"
+
+backend:
+  name: proxy
+  branch: main
+  proxy_url: http://localhost:8081/api/v1
+
+collections:
+  - name: "Main" # /admin/collections/main
+    label: "Main" # Used in the UI
+    folder: "src/_content/main" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    extension: "mdx"
+    slug: "{{filename}}"
+    format: "frontmatter"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
