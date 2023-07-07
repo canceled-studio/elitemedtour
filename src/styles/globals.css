@@ -51,10 +51,15 @@ article p {
   @apply text-base;
 }
 
-article ul {
+article ul,
+article ol {
   @apply ml-3;
 }
 
-article li {
+article ul li {
   @apply list-disc ml-3;
+}
+
+article ol li {
+  @apply list-decimal ml-3;
 }
