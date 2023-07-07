@@ -26,7 +26,7 @@ export function ContentList({ items }) {
   return (
     <div className="flex flex-col gap-2">
       {items.map(({ slug, frontmatter }) => (
-        <ContentListItem key={slug} slug={slug} {...frontmatter} />
+        <ContentListItem {...frontmatter} key={slug} slug={slug} />
       ))}
     </div>
   );
