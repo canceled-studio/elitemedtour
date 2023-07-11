@@ -28,7 +28,7 @@ collections:
     folder: "src/_content/clinics/switzerland" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     extension: "mdx"
-    slug: "clinics/switzerland/{{fields.slug}}"
+    slug: "{{fields.slug}}"
     format: "frontmatter"
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
@@ -44,7 +44,7 @@ collections:
     folder: "src/_content/clinics/turkey" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     extension: "mdx"
-    slug: "clinics/turkey/{{fields.slug}}"
+    slug: "{{fields.slug}}"
     format: "frontmatter"
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
