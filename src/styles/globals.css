@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-link {
+  @apply text-[#00e];
+}
+
 a {
-  @apply underline text-[#00e];
+  @apply underline text-link;
 }
 
 .section {

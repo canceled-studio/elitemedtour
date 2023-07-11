@@ -108,3 +108,22 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "Partners"
+    label: "Partners"
+    folder: "src/_content/partners"
+    create: true
+    extension: "mdx"
+    slug: "{{fields.slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - {
+          label: "Subtitle",
+          name: "subtitle",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Link", name: "link", widget: "string" }
