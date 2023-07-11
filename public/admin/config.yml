@@ -9,28 +9,28 @@ backend:
   proxy_url: http://localhost:8081/api/v1
 
 collections:
-  - name: "Main" # /admin/collections/main
-    label: "Main" # Used in the UI
-    folder: "src/_content/main" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+  - name: "Main"
+    label: "Main"
+    folder: "src/_content/main"
+    create: true
     extension: "mdx"
-    slug: "main/{{fields.slug}}"
+    slug: "{{fields.slug}}"
     format: "frontmatter"
-    fields: # The fields for each document, usually in front matter
+    fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "clinics-switzerland" # /admin/collections/main
-    label: "Clinics in Switzerland" # Used in the UI
-    folder: "src/_content/clinics/switzerland" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+  - name: "clinics-switzerland"
+    label: "Clinics in Switzerland"
+    folder: "src/_content/clinics/switzerland"
+    create: true
     extension: "mdx"
     slug: "{{fields.slug}}"
     format: "frontmatter"
-    fields: # The fields for each document, usually in front matter
+    fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Featured Image", name: "image", widget: "image" }
@@ -39,14 +39,14 @@ collections:
       - { label: "City", name: "city", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "clinics-turkey" # /admin/collections/main
-    label: "Clinics in Turkey" # Used in the UI
-    folder: "src/_content/clinics/turkey" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+  - name: "clinics-turkey"
+    label: "Clinics in Turkey"
+    folder: "src/_content/clinics/turkey"
+    create: true
     extension: "mdx"
     slug: "{{fields.slug}}"
     format: "frontmatter"
-    fields: # The fields for each document, usually in front matter
+    fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Featured Image", name: "image", widget: "image" }
@@ -55,15 +55,75 @@ collections:
       - { label: "City", name: "city", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "springs" # /admin/collections/main
-    label: "Springs" # Used in the UI
-    folder: "src/_content/springs" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+  - name: "springs"
+    label: "Springs"
+    folder: "src/_content/springs"
+    create: true
     extension: "mdx"
-    slug: "springs/{{fields.slug}}"
+    slug: "{{fields.slug}}"
     format: "frontmatter"
-    fields: # The fields for each document, usually in front matter
+    fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "spas"
+    label: "Spas"
+    folder: "src/_content/spas"
+    create: true
+    extension: "mdx"
+    slug: "{{fields.slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "Services"
+    label: "Services"
+    folder: "src/_content/services"
+    create: true
+    extension: "mdx"
+    slug: "{{fields.slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "News"
+    label: "News"
+    folder: "src/_content/news"
+    create: true
+    extension: "mdx"
+    slug: "{{fields.slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "Partners"
+    label: "Partners"
+    folder: "src/_content/partners"
+    create: true
+    extension: "mdx"
+    slug: "{{fields.slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - {
+          label: "Subtitle",
+          name: "subtitle",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Link", name: "link", widget: "string" }

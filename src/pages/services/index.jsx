@@ -1,6 +1,6 @@
-import { getAllContentByType, getSingleContent } from "@/lib/api/content";
 import { ContentList } from "@/components/content-list";
 import { Body, Header, Section } from "@/components/section";
+import { getAllContentByType, getSingleContent } from "@/lib/api/content";
 
 export default function Main({ page, items }) {
   return (
@@ -16,8 +16,8 @@ export default function Main({ page, items }) {
 export const getStaticProps = async () => {
   return {
     props: {
-      page: await getSingleContent("sections/main/index"),
-      items: getAllContentByType("main"),
+      page: await getSingleContent("sections/services/index"),
+      items: getAllContentByType("services"),
     },
   };
 };
