@@ -94,3 +94,17 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "News"
+    label: "News"
+    folder: "src/_content/news"
+    create: true
+    extension: "mdx"
+    slug: "{{fields.slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
