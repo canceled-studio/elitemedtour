@@ -34,9 +34,5 @@
     {
         "title": "Контакты",
         "link": "/contacts"
-    },
-    {
-        "title": "Отзывы",
-        "link": "/reviews"
     }
 ]
