@@ -21,7 +21,7 @@ export function ContentGridItem({ title, slug, image }) {
 
 export function ContentGrid({ items }) {
   return (
-    <div className="grid grid-cols-3 gap-5">
+    <div className="grid grid-cols-3 gap-5 items-end">
       {items.map(({ slug, frontmatter }) => (
         <ContentGridItem {...frontmatter} key={slug} slug={slug} />
       ))}
