@@ -10,7 +10,7 @@ export function ContentGridItem({ title, slug, image }) {
         <Image
           className="object-cover w-[250px] h-[125px]"
           width="250"
-          height="200"
+          height="125"
           alt={title}
           src={image}
         />

@@ -7,7 +7,7 @@ export function ContentListItem({ title, slug, description, image }) {
       <h4 className="text-yellow-400">{title}</h4>
       <div className="flex gap-5">
         <Image
-          className="shrink-0"
+          className="shrink-0 object-cover w-[150px] h-[100px]"
           width="150"
           height="100"
           alt={title}
