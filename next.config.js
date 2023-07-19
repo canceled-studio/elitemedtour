@@ -11,10 +11,11 @@ const withMDX = require("@next/mdx")({
   },
 });
 
-/** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   pageExtensions: ["js", "jsx", "mdx"],
   images: {
+    unoptimized: true,
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {
