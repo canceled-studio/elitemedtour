@@ -51,7 +51,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -61,6 +61,7 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
+          generator_config_file: ./next.config.js
       - name: Restore cache
         uses: actions/cache@v3
         with:
@@ -73,7 +74,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Build  Next.js static HTML
+      - name: Build Next.js static HTML
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Debug
         run: ls -la
@@ -82,7 +83,7 @@ jobs:
 #         with:
 #           path: ./out
 
-  # Deployment job
+# Deployment job
 #   deploy:
 #     environment:
 #       name: github-pages
