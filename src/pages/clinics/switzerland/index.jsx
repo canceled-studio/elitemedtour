@@ -8,9 +8,6 @@ export default function SwitzerlandClinics({ page, items }) {
     <Section>
       <Header>{page.frontmatter.title}</Header>
       <Body>
-        <MDXRemote {...page.content} />
-      </Body>
-      <Body>
         <ContentList items={items} />
       </Body>
     </Section>
